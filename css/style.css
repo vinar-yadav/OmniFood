@@ -1,6 +1,6 @@
-/**************************/
+/* ***************************** */
 /* HEADER */
-/**************************/
+/* ***************************** */
 
 .header {
   display: flex;
@@ -8,7 +8,7 @@
   align-items: center;
   background-color: #fdf2e9;
 
-  /* Because we want header to be sticky later */
+  /* Because we want the header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
   position: relative;
@@ -18,9 +18,9 @@
   height: 2.2rem;
 }
 
-/**************************/
+/* ***************************** */
 /* NAVIGATION */
-/**************************/
+/* ***************************** */
 
 .main-nav-list {
   list-style: none;
@@ -31,11 +31,10 @@
 
 .main-nav-link:link,
 .main-nav-link:visited {
-  display: inline-block;
   text-decoration: none;
   color: #333;
-  font-weight: 500;
   font-size: 1.8rem;
+  font-weight: 500;
   transition: all 0.3s;
 }
 
@@ -46,9 +45,9 @@
 
 .main-nav-link.nav-cta:link,
 .main-nav-link.nav-cta:visited {
+  color: #fff;
   padding: 1.2rem 2.4rem;
   border-radius: 9px;
-  color: #fff;
   background-color: #e67e22;
 }
 
@@ -62,7 +61,6 @@
   border: none;
   background: none;
   cursor: pointer;
-
   display: none;
 }
 
@@ -76,9 +74,27 @@
   display: none;
 }
 
-/**************************/
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/* ***************************** */
 /* HERO SECTION */
-/**************************/
+/* ***************************** */
 
 .section-hero {
   background-color: #fdf2e9;
@@ -91,8 +107,8 @@
   padding: 0 3.2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 9.6rem;
   align-items: center;
+  gap: 9.6rem;
 }
 
 .hero-description {
@@ -106,10 +122,10 @@
 }
 
 .delivered-meals {
+  margin-top: 8rem;
   display: flex;
   align-items: center;
   gap: 1.6rem;
-  margin-top: 8rem;
 }
 
 .delivered-imgs {
@@ -118,7 +134,7 @@
 
 .delivered-imgs img {
   height: 4.8rem;
-  width: 4.8rem;
+  width: 4.8em;
   border-radius: 50%;
   margin-right: -1.6rem;
   border: 3px solid #fdf2e9;
@@ -138,9 +154,9 @@
   font-weight: 700;
 }
 
-/**************************/
+/* ***************************** */
 /* FEATURED IN SECTION */
-/**************************/
+/* ***************************** */
 
 .section-featured {
   padding: 4.8rem 0 3.2rem 0;
@@ -167,9 +183,9 @@
   opacity: 50%;
 }
 
-/**************************/
+/* ***************************** */
 /* HOW IT WORKS SECTION */
-/**************************/
+/* ***************************** */
 
 .section-how {
   padding: 9.6rem 0;
@@ -186,13 +202,12 @@
   font-size: 1.8rem;
   line-height: 1.8;
 }
-
 .step-img-box {
-  position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 .step-img-box::before,
@@ -200,6 +215,7 @@
   content: "";
   display: block;
   border-radius: 50%;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -210,10 +226,11 @@
   width: 60%;
   /* height: 60%; */
 
-  /* 60% of parent's width */
+  /* 60% of parents width */
   padding-bottom: 60%;
 
   background-color: #fdf2e9;
+
   z-index: -2;
 }
 
@@ -223,15 +240,13 @@
   background-color: #fae5d3;
   z-index: -1;
 }
-
 .step-img {
   width: 35%;
-  /* z-index: 10; */
 }
 
-/**************************/
+/* ***************************** */
 /* MEALS SECTION */
-/**************************/
+/* ***************************** */
 
 .section-meals {
   padding: 9.6rem 0;
@@ -251,6 +266,10 @@
 
 .meal-content {
   padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-img {
+  width: 100%;
 }
 
 .meal-tags {
@@ -273,14 +292,14 @@
   background-color: #51cf66;
 }
 .tag--vegan {
-  background-color: #94d82d;
+  background-color: #95d82d;
 }
 .tag--paleo {
-  background-color: #ffd43b;
+  background-color: #ffd434;
 }
 
 .meal-title {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #333;
   font-weight: 600;
   margin-bottom: 3.2rem;
@@ -306,18 +325,14 @@
   color: #e67e22;
 }
 
-.meal-img {
-  width: 100%;
-}
-
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
 }
 
-/**************************/
-/* TESTIMONIALS SECTION */
-/**************************/
+/* ***************************** */
+/* TESTIMONIAL SECTION */
+/* ***************************** */
 
 .section-testimonials {
   background-color: #fdf2e9;
@@ -340,7 +355,6 @@
 .testimonial-img {
   width: 6.4rem;
   border-radius: 50%;
-  margin-bottom: 1.2rem;
 }
 
 .testimonial-text {
@@ -375,9 +389,9 @@
   transform: scale(1.1);
 }
 
-/**************************/
-/* MEALS SECTION */
-/**************************/
+/* ***************************** */
+/* PRICING SECTION */
+/* ***************************** */
 
 .section-pricing {
   padding: 9.6rem 0;
@@ -385,25 +399,23 @@
 
 .pricing-plan {
   border-radius: 11px;
-
   width: 75%;
 }
 
-.pricing-plan--starter {
+.pricing-plan-starter {
   justify-self: end;
   border: 2px solid #fdf2e9;
   padding: 4.6rem;
 }
 
-.pricing-plan--complete {
+.pricing-plan-complete {
   background-color: #fdf2e9;
   padding: 4.8rem;
   position: relative;
   overflow: hidden;
 }
-
-.pricing-plan--complete::after {
-  content: "Best value";
+.pricing-plan-complete::after {
+  content: "Best Value";
   position: absolute;
   top: 6%;
   right: -18%;
@@ -450,7 +462,7 @@
   color: #6f6f6f;
 }
 
-.plan-sing-up {
+.plan-sign-up {
   text-align: center;
   margin-top: 4.8rem;
 }
@@ -483,28 +495,28 @@
   line-height: 1.8;
 }
 
-/**************************/
+/* ***************************** */
 /* CTA SECTION */
-/**************************/
+/* ***************************** */
 
 .section-cta {
   /* top / right / bottom / left */
-  /* padding: 9.6rem 0 12.8rem 0; */
+  /* padding: 4.8rem 0 12.8rem 0; */
 
-  /* top / horizontal / left */
+  /* top / horizontal / bottom */
   padding: 4.8rem 0 12.8rem;
 }
 
 .cta {
   display: grid;
-  /* 2/3 = 66.6% + 1/3 = 33.3% */
+  /* 2.3 = 66.6% , 1/3 = 33.3% */
   grid-template-columns: 2fr 1fr;
-  /* background-color: #e67e22; */
+  background-color: #e67e22;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   border-radius: 11px;
+  overflow: hidden;
 
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
-  overflow: hidden;
 }
 
 .cta-text-box {
@@ -571,16 +583,16 @@
   box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
 
-/**************************/
-/* FOOTER */
-/**************************/
+/* ***************************** */
+/* FOOTER SECTION */
+/* ***************************** */
 
 .footer {
   padding: 12.8rem 0;
-  border-top: 1px solid #eee;
+  border: 1px solid #eee;
 }
 
-.grid--footer {
+.grid-footer {
   grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
 }
 
